@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+:root {
+  --black-color: hsl(0, 0%, 0%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Metal Mania', Arial, sans-serif;
+}
+
+img {
+  display: block;
+}
+
+#main {
+  margin: 50px;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-caption,
+#img-caption-2 {
+  font-size: small;
+  margin: 15px 0 5px 0;
+}
+
+
+/* Media */
+
+@media screen and (min-width: 320px) {
+  body {
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    font-size: medium;
+  }
+
+  #img-div,
+  #img-div-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: medium;
+  }
+
+  #img-div,
+  #img-div-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 6rem 1rem 6rem;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  body {
+    font-size: large;
+  }
+
+  #img-div,
+  #img-div-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 16rem 1rem 16rem;
+  }
+}

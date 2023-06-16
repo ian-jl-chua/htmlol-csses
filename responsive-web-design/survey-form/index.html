@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">This is a Survey Form</h1>
+      <p id="description">
+        Thank you for taking the time to fill out this survey.
+      </p>
+    </header>
+
+    <form id="survey-form">
+      <!-- Personal part -->
+      <div class="parts">
+        <label for="name" id="name-label"> Name </label
+        ><input
+          class="input-area"
+          id="name"
+          name="name"
+          type="text"
+          required
+          placeholder="enter your name"
+        />
+      </div>
+      <div class="parts">
+        <label for="email" id="email-label"> Email </label
+        ><input
+          class="input-area"
+          id="email"
+          name="email"
+          type="email"
+          required
+          placeholder="enter your email"
+        />
+      </div>
+      <div class="parts">
+        <label for="number" id="number-label"> Age (optional) </label>
+        <input
+          class="input-area"
+          id="number"
+          name="number"
+          type="number"
+          min="13"
+          max="100"
+          placeholder="age"
+        />
+      </div>
+
+      <!-- Continent part -->
+      <div class="parts">
+        <label for="continent">Which continent are you from?</label>
+        <select id="dropdown" name="continent">
+          <option value="">Select an option</option>
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Antarctica">Antarctica</option>
+          <option value="Australia">Australia</option>
+        </select>
+      </div>
+
+      <!-- Animal part -->
+      <fieldset>
+        <legend>Your favourite type of animal?</legend>
+        <div class="radio">
+          <label for="cats"
+            ><input
+              type="radio"
+              name="animal"
+              value="cats"
+              id="cats"
+            />Cats</label
+          >
+        </div>
+        <div class="radio">
+          <label for="dogs"
+            ><input
+              type="radio"
+              name="animal"
+              value="dogs"
+              id="dogs"
+            />Dogs</label
+          >
+        </div>
+        <div class="radio">
+          <label for="birds">
+            <input
+              type="radio"
+              name="animal"
+              value="birds"
+              id="birds"
+            />Birds</label
+          >
+        </div>
+        <div class="radio">
+          <label for="rats">
+            <input
+              type="radio"
+              name="animal"
+              value="rats"
+              id="rats"
+            />Rats</label
+          >
+        </div>
+        <div class="parts">
+          <label for="yourAnimal"
+            >Enter your animal if it is not listed above:</label
+          >
+          <input
+            class="input-area"
+            type="text"
+            name="yourAnimal"
+            placeholder="your fav animal?"
+            id="yourAnimal"
+          />
+        </div>
+      </fieldset>
+      <br />
+      <!-- Meaning part -->
+      <div class="parts">
+        <p>
+          What is the true meaning of everything?
+          <span class="clue">(Check all that apply)</span>
+        </p>
+        <label for="meaning"
+          ><input
+            name="meaning"
+            value="I-know"
+            type="checkbox"
+            class="checkbox"
+          />I know, but will keep it to myself.</label
+        >
+        <label for="meaning"
+          ><input
+            name="meaning"
+            value="I-dont-know"
+            type="checkbox"
+            class="checkbox"
+          />I don't know...</label
+        >
+        <label for="meaning"
+          ><input
+            name="meaning"
+            value="define-true-meaning"
+            type="checkbox"
+            class="checkbox"
+          />Define "true meaning"</label
+        >
+        <label for="meaning"
+          ><input
+            name="meaning"
+            value="nothing"
+            type="checkbox"
+            class="checkbox"
+          />Nothing, and everything, simultaneously</label
+        >
+        <label for="meaning"
+          ><input
+            name="meaning"
+            value="the-present"
+            type="checkbox"
+            class="checkbox"
+          />Let go of the past, stop fantasying bout the future. Focus on the
+          here and now.</label
+        >
+      </div>
+
+      <!-- Comments part -->
+      <div class="comment-container">
+        <p>Please type in any further information you would like to add.</p>
+        <textarea
+          name="comment"
+          id="comment"
+          class="comment-input"
+          placeholder="your comment"
+        ></textarea>
+      </div>
+      <button id="submit" type="submit" class="submit-btn" value="submit">
+        Submit
+      </button>
+    </form>
+  </body>
+</html>
+
+<!-- fieldsets are used for accessability purpose and to be used for grouping a few inputs together. It is not necessary to have them in forms, but it provide clarity to the organization of the form and allow a designer easier access to decorate form elements -->

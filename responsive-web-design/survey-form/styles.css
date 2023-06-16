@@ -1,0 +1,85 @@
+*,
+::before ::after {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0.5em 10px auto;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+body {
+  background-color: rgb(33, 1, 1);
+  color: white;
+  width: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+form {
+  background-color: black;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+select {
+  margin: 10px 0 0 0;
+  width: 95%;
+  min-height: 2em;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.radio,
+.checkbox {
+  display: inline-block;
+  margin-right: 2.5rem;
+  min-height: 2rem;
+  padding: 0.5rem;
+}
+
+.parts {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.input-area {
+  display: block;
+  width: 90%;
+  height: 1rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.comment-container {
+  display: grid;
+  padding: 1rem;
+}
+
+.comment-input {
+  height: 8rem;
+  resize: none;
+  padding: 0.5rem;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgb(117, 13, 13);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
