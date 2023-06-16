@@ -12,6 +12,31 @@ body {
   margin-top: 65%;
 }
 
+.fa-music {
+  display: inline-block;
+  margin: 8% 0 0 13%;
+}
+
+.blue {
+  background-color: #1e90ff;
+}
+
+#blue-left {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+#blue-right {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
 #back-wall {
   background-color: #8b4513;
   width: 100%;
@@ -92,7 +117,7 @@ body {
   left: 0;
 }
 
-#gray-mask{
+#gray-mask {
   width: 150px;
   height: 150px;
   background-color: rgb(167, 162, 117);
@@ -101,8 +126,12 @@ body {
   left: 70px;
 }
 
-#white-paper{
+#white-paper {
   width: 400px;
   height: 100px;
   background-color: ghostwhite;
+  position: absolute;
+  top: 250px;
+  left: -150px;
+  z-index: 1;
 }
