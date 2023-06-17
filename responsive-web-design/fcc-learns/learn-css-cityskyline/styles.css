@@ -1,16 +1,16 @@
 :root {
-  --building-color1: #999;
+  --building-color1: #aa80ff;
   --building-color2: #66cc99;
   --building-color3: #cc6699;
   --building-color4: #538cc6;
-  --window-color1: black;
-  --window-color2: gray;
+  --window-color1: #bb99ff;
+  --window-color2: #8cd9b3;
   --window-color3: #d98cb3;
   --window-color4: #8cb3d9;
 }
 
 * {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   box-sizing: border-box;
 }
 
@@ -18,6 +18,15 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
+}
+/* the sky */
+.sky{
+  background: radial-gradient(
+    circle closest-corner at 15% 15%,
+    #ffcf33 0% 20%,
+    #ffff66 21%,
+    #bbeeff 100%
+  );
 }
 
 /* building container */
@@ -253,7 +262,15 @@ body {
 .fb5 {
   width: 10%;
   height: 33%;
-  background-color: var(--building-color2);
+  background: repeating-linear-gradient(
+      var(--building-color2) 0% 5%,
+      transparent 5% 10%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--building-color2) 0% 12%,
+      var(--window-color2) 12% 44%
+    );
   position: relative;
   right: 10%;
 }
@@ -261,5 +278,32 @@ body {
 .fb6 {
   width: 9%;
   height: 38%;
-  background-color: var(--building-color3);
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3) 0% 10%,
+      transparent 10% 30%
+    ),
+    repeating-linear-gradient(  
+      var(--building-color3) 0% 10%,
+      var(--window-color3) 10% 30%
+    );
+}
+
+@media (max-width: 1000px){
+  :root{
+    --building-color1:#000;
+    --building-color2:#000;
+    --building-color3:#000;
+    --building-color4:#000;
+    
+  }
+  .sky{
+    background: radial-gradient(
+      circle closest-corner at 15% 15%,
+      #ccc,
+      #ccc 20%,
+      #445 21%,
+      #223 100%
+    );
+  }
 }
