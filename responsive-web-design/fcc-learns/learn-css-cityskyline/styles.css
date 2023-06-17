@@ -1,12 +1,12 @@
 :root {
-  --building-color1: #aa80ff;
-  --building-color2: #66cc99;
-  --building-color3: #cc6699;
-  --building-color4: #538cc6;
-  --window-color1: #bb99ff;
-  --window-color2: #8cd9b3;
-  --window-color3: #d98cb3;
-  --window-color4: #8cb3d9;
+  --building-color1: #4d9df2;
+  --building-color2: #6189ba;
+  --building-color3: #48b0dd;
+  --building-color4: #659cd2;
+  --window-color1: #2c5a8c;
+  --window-color2: #a4c5ee;
+  --window-color3: #a8d2e3;
+  --window-color4: #4d6176;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
   overflow: hidden;
 }
 /* the sky */
-.sky{
+.sky {
   background: radial-gradient(
     circle closest-corner at 15% 15%,
     #ffcf33 0% 20%,
@@ -87,19 +87,19 @@ body {
   width: 5vw;
   height: 5vw; */
   /* border-top: 5vw solid #000; */
-  border-bottom: 5vh solid var(--building-color2);
+  border-bottom: 5vh solid var(--window-color2);
   border-left: 5vw solid transparent;
   border-right: 5vw solid transparent;
 }
 
 .bb2b {
   width: 100%;
-  height: 100%;
+  height: 90%;
   background: repeating-linear-gradient(
-    var(--building-color2) 0%,
+    var(--building-color1) 0%,
     var(--building-color2) 6%,
     var(--window-color2) 6%,
-    var(--window-color2) 9%
+    var(--window-color1) 9%
   );
   /* shorthand version of the above */
   /* background: repeating-linear-gradient(
@@ -132,13 +132,13 @@ body {
 .bb4b {
   width: 80%;
   height: 5%;
-  background-color: var(--building-color4);
+  background: linear-gradient(var(--building-color4) 50%, var(--window-color1));
 }
 
 .bb4c {
   width: 100%;
   height: 85%;
-  background-color: var(--building-color4);
+  background: linear-gradient(var(--building-color4) 50%, var(--window-color1));
 }
 
 .bb1-window {
@@ -160,14 +160,14 @@ body {
 
 .fb1a {
   border-bottom: 7vh solid var(--building-color4);
-  border-left: 2vw solid transparent;
-  border-right: 2vw solid transparent;
+  border-left: 3vw solid transparent;
+  border-right: 3vw solid transparent;
 }
 
 .fb1b {
   width: 60%;
   height: 10%;
-  background-color: var(--building-color4);
+  background: linear-gradient(var(--building-color4) 50%, var(--window-color1));
 }
 
 .fb1c {
@@ -216,13 +216,13 @@ body {
 .fb3a {
   width: 80%;
   height: 15%;
-  background-color: var(--building-color1);
+  background: linear-gradient(var(--building-color1) 50%, var(--window-color1));
 }
 
 .fb3b {
   width: 100%;
   height: 35%;
-  background-color: var(--building-color1);
+  background: linear-gradient(var(--building-color1) 50%, var(--window-color1));
 }
 
 .fb3-window {
@@ -283,18 +283,22 @@ body {
       var(--building-color3) 0% 10%,
       transparent 10% 30%
     ),
-    repeating-linear-gradient(  
+    repeating-linear-gradient(
       var(--building-color3) 0% 10%,
       var(--window-color3) 10% 30%
     );
 }
 
-@media (max-width: 1000px){
+@media (max-width: 800px){
   :root{
     --building-color1:#000;
     --building-color2:#000;
     --building-color3:#000;
     --building-color4:#000;
+    --window-color1:#cbbc99;
+    --window-color2:#878276;
+    --window-color3:#f1c57e;
+    --window-color4:#e5dac6;
     
   }
   .sky{
