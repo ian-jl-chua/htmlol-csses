@@ -17,21 +17,16 @@ body {
 }
 
 /* building container */
-.background-buildings {
+.background-buildings,
+.foreground-buildings {
+  top: 0;
+  position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
 }
-
-.foreground-buildings{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-
 
 /* background buildings */
 .bb1 {
