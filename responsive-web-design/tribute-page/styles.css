@@ -3,6 +3,7 @@
 :root {
   --black-color: hsl(0, 0%, 0%);
   --white-color: hsl(0, 0%, 100%);
+  --blood: rgb(210, 9, 9);
 }
 
 html {
@@ -22,14 +23,9 @@ h3 {
   font-family: 'Metal Mania', Arial, sans-serif;
 }
 
-img {
-  display: block;
+h2 {
+  color: var(--blood);
 }
-
-#main {
-  margin: 50px;
-}
-
 
 img {
   max-width: 100%;
@@ -38,12 +34,24 @@ img {
   margin: 0 auto;
 }
 
+a {
+  color: var(--blood);
+  cursor: pointer;
+}
+
+a:hover {
+  color: ghostwhite;
+}
+
+#main {
+  margin: 50px;
+}
+
 #img-caption,
 #img-caption-2 {
   font-size: small;
   margin: 15px 0 5px 0;
 }
-
 
 /* Media */
 
