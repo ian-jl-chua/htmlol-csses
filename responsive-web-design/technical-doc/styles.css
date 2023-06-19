@@ -1,5 +1,76 @@
-@media screen and (min-width: 1023px) {
-  section {
-    padding: 1em;
+:root {
+  --black: black;
+  --white: ghostwhite;
+  --red: rgba(238, 54, 33, 0.762);
+  --faint: rgb(65, 62, 62);
+}
+
+html,
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+}
+
+header {
+  font-size: 1.8em;
+  background: var(--faint);
+  border: 1px solid var(--faint);
+  border-radius: 5px;
+}
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: var(--faint);
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: var(--faint);
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  padding: 12px 0px 12px 0px;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+#main-doc {
+  position: absolute;
+  margin-left: 280px;
+  padding: 10px;
+  margin-bottom: 110px;
+}
+
+@media screen and (max-width: 723px) {
+  #navbar {
+    position: absolute;
+    top: 30px;
+    left: -300px;
+    width: 300px;
+  }
+
+  #main-doc {
+    position: absolute;
+    left: -320px;
+    padding: 30px;
   }
 }
