@@ -27,10 +27,9 @@ a:hover {
 
 #navbar {
   position: fixed;
-  min-width: 290px;
   top: 0px;
   left: 0px;
-  width: 300px;
+  width: 290px;
   height: 100%;
   border-right: solid;
   border-color: var(--faint);
@@ -61,8 +60,8 @@ a:hover {
 }
 #main-doc {
   position: absolute;
-  margin-left: 320px;
-  padding: 20px;
+  margin-left: 300px;
+  padding: 20px 0px;
   margin-bottom: 110px;
 }
 
@@ -90,7 +89,7 @@ code {
   border-radius: 5px;
 }
 
-@media screen and (max-width: 723px) {
+@media screen and (max-width: 870px) {
   #navbar {
     background-color: var(--black);
     position: absolute;
@@ -105,13 +104,16 @@ code {
 
   #navbar ul {
     border: 1px solid;
-    height: 207px;
+    height: 195px;
   }
+
   #main-doc {
     position: relative;
     margin-left: 0px;
-    margin-top: 270px;
+    margin-top: 300px;
   }
 
-
+article{
+  padding: 2px;
+}
 }
