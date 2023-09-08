@@ -1,12 +1,71 @@
+:root {
+  --FS: clamp(1.25rem, 2.5vh, 2rem);
+  --BG-COLOR: rgb(210, 196, 163);
+  --TXT-COLOR: rgb(26, 11, 8);
+  --LINK-COLOR: wheat;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BG-COLOR: rgb(22, 22, 22);
+    --TXT-COLOR: rgb(228, 221, 209);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--BG-COLOR);
+  color: var(--TXT-COLOR);
+  font-size: var(--FS);
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+}
+
+.logo {
+  width: 100vw;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #nav-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-
 }
 
-@media screen and (max-width: 720px){
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 720px) {
   nav {
     margin-top: 10px;
     width: 100%;
