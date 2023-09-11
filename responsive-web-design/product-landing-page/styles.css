@@ -1,13 +1,14 @@
 :root {
-  --FS: clamp(1.25rem, 2.5vh, 2rem);
+  --FS: clamp(1.25rem, 2vh, 2rem);
   --BG-COLOR: rgb(210, 196, 163);
   --TXT-COLOR: rgb(26, 11, 8);
   --LINK-COLOR: wheat;
+  --HEADER-COLOR: black;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --BG-COLOR: rgb(22, 22, 22);
+    --BG-COLOR: rgb(29, 28, 28);
     --TXT-COLOR: rgb(228, 221, 209);
   }
 }
@@ -25,47 +26,110 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   padding: 0.5rem;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
-  background-color: red;
+  background-color: var(--HEADER-COLOR);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .logo {
-  width: 100vw;
-}
-
-.logo img {
-  width: 100%;
-  max-width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
+
+.logo img {
   width: 100%;
+  max-width: 150px;
 }
 
-@media (max-width: 600px) {
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar ul li {
+  padding: 0 10px;
+}
+
+.nav-bar a {
+  color: var(--LINK-COLOR);
+}
+
+.hero {
+  padding-top: 10rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h2 {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+iframe {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 5rem 1.5rem;
+}
+
+.register input {
+  max-width: 300px;
+  width: 100%;
+  padding: 5px;
+  margin: 10px 5px;
+}
+
+.features {
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.features .desc {
+  padding-top: 1rem;
+}
+
+.hero-special {
+  border: 2px solid var(--LINK-COLOR);
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-special h2 {
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 650px) {
   header {
     flex-wrap: wrap;
   }
-}
 
-@media (max-width: 650px) {
-  .logo {
-    margin-top: 15px;
-    width: 100%;
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 720px) {
   nav {
     margin-top: 10px;
     width: 100%;
@@ -73,6 +137,20 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 50px;
+    padding-right: 20px;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: center;
   }
 }
+/* @media screen and (min-width: 810px) {
+
+
+  .logo {
+    margin-top: 0px;
+    width: 100%;
+    justify-content: center;
+  }
+} */
