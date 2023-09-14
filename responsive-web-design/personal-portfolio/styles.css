@@ -1,0 +1,128 @@
+:root {
+  --bg-color: rgb(212, 245, 179);
+  --bg2-color: rgb(167, 189, 144);
+  --txt-color: rgb(57, 60, 53);
+  --header: rgb(1, 23, 2);
+  --font-size: clamp(1.25em, 2vw, 2em);
+  --link-color: rgb(196, 207, 180);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: rgb(3, 24, 7);
+    --bg2-color: linear-gradient(rgb(6, 48, 15), rgb(3, 24, 7));
+    --bg3-color: linear-gradient(rgb(3, 24, 7), rgb(6, 49, 14));
+
+    --txt-color: rgb(211, 231, 185);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+  font-size: var(--font-size);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 100vw;
+  background-color: var(--header);
+  position: fixed;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list li {
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: var(--link-color);
+  display: block;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.nav-list a:is(:hover, :focus) {
+  color: rgb(109, 214, 109);
+  transform: scale(1.25);
+  transition: all 0.5s;
+}
+
+.welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg2-color);
+}
+
+.welcome-section p {
+  padding-top: 2rem;
+  font-size: 2em;
+  text-align: center;
+}
+
+@keyframes glow {
+  0% {
+    color: rgba(81, 192, 68, 0.4);
+  }
+  20%{
+    color: rgba(81, 192, 68, 0.6);
+  }
+  40%{
+    color: rgba(81, 192, 68, 0.8);
+  }
+  60% {
+    color: rgba(81, 192, 68, 1);
+  }
+  80% {
+    color: rgba(81, 192, 68, 0.8);
+  }
+  100% {
+    color: rgba(81, 192, 68, 0.6);
+  }
+}
+
+.glow-name {
+  animation: glow 4s infinite;
+}
+
+.projects-section{
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.projects-section h2{
+  padding-bottom: 1.5rem;
+
+}
+
+
