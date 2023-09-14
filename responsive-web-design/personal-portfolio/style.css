@@ -1,0 +1,28 @@
+:root {
+  --bg-color: wheat;
+  --txt-color: rgb(60, 58, 53);
+  --header: black;
+  --font-size: clamp(1em, 1.5vw, 2em);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: rgb(60, 58, 53);
+    --txt-color: rgb(233, 214, 179);
+  }
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--txt-color);
+}
